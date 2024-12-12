@@ -1,4 +1,4 @@
-package io.afalabarce.template.kmm.presentation.viewmodels
+package com.hiberus.template.kmm.presentation.viewmodels
 
 import org.junit.Assert.assertTrue
 import org.junit.Test
