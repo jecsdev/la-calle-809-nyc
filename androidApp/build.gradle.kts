@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = BuildVersion.environment.applicationId
-    compileSdk = BuildVersion.android.compileSdk
+    namespace = BuildVersion.Environment.applicationId
+    compileSdk = BuildVersion.Android.compileSdk
     defaultConfig {
-        minSdk = BuildVersion.android.minSdk
-        applicationId = BuildVersion.environment.applicationId
-        versionCode = BuildVersion.environment.appVersion
-        versionName = BuildVersion.environment.appVersionCode
+        minSdk = BuildVersion.Android.minSdk
+        applicationId = BuildVersion.Environment.applicationId
+        versionCode = BuildVersion.Environment.appVersion
+        versionName = BuildVersion.Environment.appVersionCode
     }
     buildFeatures {
         compose = true
@@ -28,11 +28,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = BuildVersion.environment.javaVersion
-        targetCompatibility = BuildVersion.environment.javaVersion
+        sourceCompatibility = BuildVersion.Environment.javaVersion
+        targetCompatibility = BuildVersion.Environment.javaVersion
     }
     kotlinOptions {
-        jvmTarget = BuildVersion.environment.jvmTarget
+        jvmTarget = BuildVersion.Environment.jvmTarget
     }
 }
 

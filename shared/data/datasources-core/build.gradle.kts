@@ -14,7 +14,7 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = BuildVersion.environment.jvmTarget
+                jvmTarget = BuildVersion.Environment.jvmTarget
             }
         }
     }
@@ -56,19 +56,19 @@ kotlin {
 
 
 android {
-    namespace = "${BuildVersion.environment.applicationId}.data.datasources.core"
-    compileSdk = BuildVersion.android.compileSdk
+    namespace = "${BuildVersion.Environment.applicationId}.data.datasources.core"
+    compileSdk = BuildVersion.Android.compileSdk
 
     defaultConfig {
-        minSdk = BuildVersion.android.minSdk
+        minSdk = BuildVersion.Android.minSdk
     }
     sourceSets["main"].apply {
         manifest.srcFile("src/androidMain/AndroidManifest.xml")
         res.srcDirs("src/androidMain/resources")
     }
     compileOptions {
-        sourceCompatibility = BuildVersion.environment.javaVersion
-        targetCompatibility = BuildVersion.environment.javaVersion
+        sourceCompatibility = BuildVersion.Environment.javaVersion
+        targetCompatibility = BuildVersion.Environment.javaVersion
     }
 }
 
@@ -84,10 +84,10 @@ ktorfit {
 
 sqldelight {
     databases {
-        create(BuildVersion.environment.appDatabaseName) {
+        create(BuildVersion.Environment.appDatabaseName) {
             // Database configuration here.
             // https://cashapp.github.io/sqldelight
-            packageName.set("${BuildVersion.environment.applicationId}.data.datasources.core.db")
+            packageName.set("${BuildVersion.Environment.applicationId}.data.datasources.core.db")
         }
     }
 }

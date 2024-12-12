@@ -1,7 +1,7 @@
 import org.gradle.api.JavaVersion
 
 object BuildVersion {
-    object environment {
+    object Environment {
         const val applicationId = "io.afalabarce.template.kmm"
         const val appName = "KMM Template"
         const val appVersion = 100
@@ -11,7 +11,7 @@ object BuildVersion {
         const val appDatabaseName = "KmmDatabase"
     }
 
-    object android {
+    object Android {
         const val minSdk = 24
         const val compileSdk = 35
     }

@@ -12,7 +12,7 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = BuildVersion.environment.jvmTarget
+                jvmTarget = BuildVersion.Environment.jvmTarget
             }
         }
     }
@@ -72,22 +72,22 @@ kotlin {
 }
 
 android {
-    namespace = "${BuildVersion.environment.applicationId}.presentation.ui"
-    compileSdk = BuildVersion.android.compileSdk
+    namespace = "${BuildVersion.Environment.applicationId}.presentation.ui"
+    compileSdk = BuildVersion.Android.compileSdk
 
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        minSdk = BuildVersion.android.minSdk
+        minSdk = BuildVersion.Android.minSdk
     }
     sourceSets["main"].apply {
         manifest.srcFile("src/androidMain/AndroidManifest.xml")
         res.srcDirs("src/androidMain/resources")
     }
     compileOptions {
-        sourceCompatibility = BuildVersion.environment.javaVersion
-        targetCompatibility = BuildVersion.environment.javaVersion
+        sourceCompatibility = BuildVersion.Environment.javaVersion
+        targetCompatibility = BuildVersion.Environment.javaVersion
     }
     buildFeatures {
         compose = true

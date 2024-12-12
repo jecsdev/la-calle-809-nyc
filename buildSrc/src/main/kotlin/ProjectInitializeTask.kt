@@ -9,11 +9,11 @@ import org.gradle.internal.logging.text.StyledTextOutputFactory
 abstract class ProjectInitializeTask : DefaultTask() {
     //region Task parameters definition
 
-    private var _sourcePackage: String = BuildVersion.environment.applicationId
+    private var _sourcePackage: String = BuildVersion.Environment.applicationId
     private var _destinationPackage: String = ""
 
     private var _destinationPath: String = ""
-    private var _appName: String = BuildVersion.environment.appName
+    private var _appName: String = BuildVersion.Environment.appName
 
     @Input
     fun getAppName(): String = _appName
@@ -106,7 +106,7 @@ abstract class ProjectInitializeTask : DefaultTask() {
                 STRINGS_XML_FILE -> {
                     file.writeText(
                         content.replace(
-                            oldValue = "<string name=\"app_name\">${BuildVersion.environment.appName}</string>",
+                            oldValue = "<string name=\"app_name\">${BuildVersion.Environment.appName}</string>",
                             newValue = "<string name=\"app_name\">${_appName}</string>"
                         )
                     )
@@ -115,14 +115,14 @@ abstract class ProjectInitializeTask : DefaultTask() {
                 CONFIG_XCCONFIG_FILE -> {
                     file.writeText(
                         content.replace(
-                            oldValue = "APP_NAME=${BuildVersion.environment.appName}",
+                            oldValue = "APP_NAME=${BuildVersion.Environment.appName}",
                             newValue = "APP_NAME=$_appName"
                         ).replace(
                             oldValue = "BUNDLE_VERSION_STRING=1.0.0",
-                            newValue = "BUNDLE_VERSION_STRING=${BuildVersion.environment.appVersionCode}"
+                            newValue = "BUNDLE_VERSION_STRING=${BuildVersion.Environment.appVersionCode}"
                         ).replace(
                             oldValue = "BUNDLE_VERSION=100",
-                            newValue = "BUNDLE_VERSION=${BuildVersion.environment.appVersion}"
+                            newValue = "BUNDLE_VERSION=${BuildVersion.Environment.appVersion}"
                         )
                     )
                 }
@@ -136,13 +136,13 @@ abstract class ProjectInitializeTask : DefaultTask() {
 
     companion object {
         private const val SOURCE_PACKAGE_DESCRIPTION =
-            "Source package from template, by default ${BuildVersion.environment.applicationId}"
+            "Source package from template, by default ${BuildVersion.Environment.applicationId}"
         private const val DESTINATION_PACKAGE_DESCRIPTION =
             "Destination package for the template, can't be empty, and not equals to sourcePackage"
         private const val DESTINATION_PATH_DESCRIPTION =
             "Destination path for the new project(sibling to root project dir), can't be empty, can't exists, and not equals to current template project dir"
         private const val APP_NAME_DESCRIPTION =
-            "New project Application Name (By Default ${BuildVersion.environment.appName})"
+            "New project Application Name (By Default ${BuildVersion.Environment.appName})"
         private const val STRINGS_XML_FILE = "strings.xml"
         private const val CONFIG_XCCONFIG_FILE = "Config.xcconfig"
     }

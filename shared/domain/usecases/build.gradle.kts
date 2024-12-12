@@ -10,7 +10,7 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = BuildVersion.environment.jvmTarget
+                jvmTarget = BuildVersion.Environment.jvmTarget
             }
         }
     }
@@ -49,10 +49,10 @@ kotlin {
 }
 
 android {
-    namespace = "${BuildVersion.environment.applicationId}.domain.usecases"
-    compileSdk = BuildVersion.android.compileSdk
+    namespace = "${BuildVersion.Environment.applicationId}.domain.usecases"
+    compileSdk = BuildVersion.Android.compileSdk
     defaultConfig {
-        minSdk = BuildVersion.android.minSdk
+        minSdk = BuildVersion.Android.minSdk
     }
 
     sourceSets["main"].apply {
@@ -60,8 +60,8 @@ android {
         res.srcDirs("src/androidMain/resources")
     }
     compileOptions {
-        sourceCompatibility = BuildVersion.environment.javaVersion
-        targetCompatibility = BuildVersion.environment.javaVersion
+        sourceCompatibility = BuildVersion.Environment.javaVersion
+        targetCompatibility = BuildVersion.Environment.javaVersion
     }
 }
 
