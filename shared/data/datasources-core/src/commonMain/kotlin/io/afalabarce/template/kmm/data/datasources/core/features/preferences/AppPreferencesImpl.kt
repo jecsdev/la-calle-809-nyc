@@ -1,10 +1,10 @@
-package io.afalabarce.template.kmm.data.datasources.core.features.preferences
+package com.jecsdev.template.kmm.data.datasources.core.features.preferences
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.longPreferencesKey
-import io.afalabarce.template.kmm.data.datasources.features.preferences.AppPreferences
+import io.jecsdev.template.kmm.data.datasources.features.preferences.AppPreferences
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

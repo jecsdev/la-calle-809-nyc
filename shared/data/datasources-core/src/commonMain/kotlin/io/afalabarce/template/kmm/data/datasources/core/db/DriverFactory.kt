@@ -1,4 +1,4 @@
-package io.afalabarce.template.kmm.data.datasources.core.db
+package com.jecsdev.template.kmm.data.datasources.core.db
 
 import app.cash.sqldelight.db.SqlDriver
 

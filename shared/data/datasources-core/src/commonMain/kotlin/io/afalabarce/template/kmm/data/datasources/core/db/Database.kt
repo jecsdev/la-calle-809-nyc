@@ -1,6 +1,6 @@
-package io.afalabarce.template.kmm.data.datasources.core.db
+package com.jecsdev.template.kmm.data.datasources.core.db
 
-import io.afalabarce.template.kmm.models.features.example.local.CacheExampleEntity
+import io.jecsdev.template.kmm.models.features.example.local.CacheExampleEntity
 
 
 class Database(databaseFactory: DriverFactory) {

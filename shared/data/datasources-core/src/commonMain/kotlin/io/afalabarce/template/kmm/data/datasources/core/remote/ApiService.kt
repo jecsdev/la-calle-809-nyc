@@ -1,4 +1,4 @@
-package io.afalabarce.template.kmm.data.datasources.core.remote
+package com.jecsdev.template.kmm.data.datasources.core.remote
 
 import de.jensklingenberg.ktorfit.http.Body
 import de.jensklingenberg.ktorfit.http.GET

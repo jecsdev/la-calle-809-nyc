@@ -1,12 +1,12 @@
-package io.afalabarce.template.kmm.data.datasources.core.di
+package com.jecsdev.template.kmm.data.datasources.core.di
 
-import io.afalabarce.template.kmm.core.common.di.KoinModuleLoader
-import io.afalabarce.template.kmm.data.datasources.core.db.Database
-import io.afalabarce.template.kmm.data.datasources.core.features.preferences.AppPreferencesImpl
-import io.afalabarce.template.kmm.data.datasources.core.remote.ApiService
-import io.afalabarce.template.kmm.data.datasources.features.preferences.AppPreferences
+import io.jecsdev.lacalle809nyc.core.common.KoinModuleLoader
+import io.jecsdev.template.kmm.data.datasources.core.db.Database
+import io.jecsdev.template.kmm.data.datasources.core.features.preferences.AppPreferencesImpl
+import io.jecsdev.template.kmm.data.datasources.core.remote.ApiService
+import io.jecsdev.template.kmm.data.datasources.features.preferences.AppPreferences
 import de.jensklingenberg.ktorfit.Ktorfit
-import io.afalabarce.template.kmm.data.datasources.core.remote.createApiService
+import io.jecsdev.template.kmm.data.datasources.core.remote.createApiService
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module

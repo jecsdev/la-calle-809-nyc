@@ -1,6 +1,6 @@
-package io.afalabarce.template.kmm.presentation.ui
+package com.jecsdev.template.kmm.presentation.ui
 
-import io.afalabarce.template.kmm.presentation.ui.di.PresentationUiDependencyInjector
+import io.jecsdev.template.kmm.presentation.ui.di.PresentationUiDependencyInjector
 import org.koin.core.context.startKoin
 
 fun initKoin() {
